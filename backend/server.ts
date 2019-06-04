@@ -46,7 +46,7 @@ export function start(port) {
 
     apolloServer.applyMiddleware({app: expressServer, path: "/api"});
 
-    httpServer.listen(port, '0.0.0.0');
+    httpServer.listen(port, '127.0.0.1');
 
     updateDataSourcesPerodically();
     io.on('connection', function (socket) {
